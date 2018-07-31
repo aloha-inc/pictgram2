@@ -22,8 +22,8 @@
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
             <li>
-              <%= link_to "#" do %>
-                <%= image_tag "icons/heart.png" %>
+              <%= link_to favorites_index_path do %>
+                <%= image_tag 'icons/heart.png' %>
               <% end %>
             </li>
             <li>
@@ -51,6 +51,10 @@
         </ul>
       </div>
     </nav>
+
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
+    <% end %>
 
     <%= yield %>
   </body>
