@@ -68,3 +68,6 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem "carrierwave"
 gem "jquery-rails"
+gem 'bcrypt'
+
+
